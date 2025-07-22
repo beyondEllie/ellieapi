@@ -10,7 +10,7 @@ class openai extends Controller
     public function index(Request $request)
     {
         $result = FacadesOpenAI::chat()->create([
-            'model' => 'gpt-4o-mini',
+            'model' => 'gpt-3.5-turbo',
             'messages' => [
                 ['role' => 'user', 'content' => 'Hello!'],
             ],
