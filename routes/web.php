@@ -1,10 +1,10 @@
 <?php
 
-use App\Http\Controllers\openai;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ChatController;
+
+Route::post('/api/chat', [ChatController::class, 'chat']);
 
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::post('/openai', [openai::class, 'index']);
